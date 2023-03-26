@@ -1,0 +1,53 @@
+@charset "ISO-8859-1";
+.containerIndex {
+    width: 50%;
+    margin: 200px auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+button, input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+td a:last-of-type{
+    margin-left: 1rem;
+}
+h1{
+    text-align: center;
+}
+.container{
+    width: 50%;
+    margin: 200px auto;
+    
+   
+}
+.formulario {
+    width: 50%;
+    margin: 0 auto;
+}
+.campos {
+    display: flex;
+    justify-content: space-between;
+}
+.alinea_botones{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+}
+tr, th, td {
+    border-bottom: 1px solid gainsboro;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+    
+}

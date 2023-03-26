@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{../../css/estilos.css}">
+    <title>Listado Abogados</title>
+</head>
+<body>
+    <h1>Lista de Abogados</h1>
+    <section class="container">
+       
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Nif</th>
+                <th>Dirección</th>
+                <th colspan="2">Acción</th>
+            </tr>
+            <tr th:each=" abogado: ${abogados}">
+                <td th:text="${abogado.idabogado}"></td>
+                <td th:text="${abogado.nombre}"></td>
+                <td th:text="${abogado.nif}"></td>
+                <td th:text="${abogado.direccion}"></td>
+                <td colspan="2"><a th:href="@{/abogado/modificar(idabogado=${abogado.idabogado})}">Editar</a>
+                <a th:href="@{/abogado/eliminar(idabogado=${abogado.idabogado})}">Eliminar</a></td>
+
+            </tr>
+        </table>
+        <div class="alinea_botones">
+            <button><a th:href="@{/abogado/forminsertar}">Nuevo Abogado</a></button>
+            <button><a th:href="@{/index}">Inicio</a></button>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
